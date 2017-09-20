@@ -1,6 +1,7 @@
 package com.akkademy
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props, Status}
+import akka.cluster.Cluster
 import akka.event.Logging
 import com.akkademy.messages.{GetRequest, KeyNotFoundException, SetRequest}
 import com.typesafe.config.ConfigFactory
@@ -45,6 +46,9 @@ object AkkademyDb {
     //创建TearcherActor，返回一个引用
     //teacherActor 是 Actor 的名，客户端需要用
     system.actorOf(Props[AkkademyDb], "akkademy-db")
+
+    val cluster = Cluster.get(system)
+
   }
 }
 
