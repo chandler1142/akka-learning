@@ -46,9 +46,6 @@ object AkkademyDb {
     //创建TearcherActor，返回一个引用
     //teacherActor 是 Actor 的名，客户端需要用
     system.actorOf(Props[AkkademyDb], "akkademy-db")
-
-    val cluster = Cluster.get(system)
-
   }
 }
 
