@@ -1,0 +1,1 @@
+~/Downloads/sbt/bin/sbt -Dsbt.log.format=true -Dsbt.global.base=/Users/chandlerzhao/.sbt -Dsbt.boot.directory=/Users/chandlerzhao/.sbt/boot/ -Dsbsbt.ivy.home=/Users/chandlerzhao/.ivy2 -Dsbt.repository.config=/Users/chandlerzhao/.sbt/repositories -Dsbt.override.build.repos=true
