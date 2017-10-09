@@ -25,6 +25,8 @@ class AskDemoArticleParser(
     case ParseArticle(uri) =>
       val senderRef = sender()
       val cacheResult = cacheActor ? GetRequest(uri)
+      import scala.concurrent.ExecutionContext.Implicits.global
+
       val result = cacheResult recoverWith {
         case _: Exception =>
           val fRawResult = httpClientActor ? uri
